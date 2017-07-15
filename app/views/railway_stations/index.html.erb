@@ -1,0 +1,15 @@
+<h1>List of stations</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th></th>
+  </tr>
+
+  <% @railway_stations.each do |rs| %>
+      <tr>
+        <td><%= rs.title %></td>
+        <td><%= link_to 'Show', railway_station_path(rs) %></td>
+      </tr>
+  <% end %>
+</table>
