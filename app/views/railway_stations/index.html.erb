@@ -1,19 +1,13 @@
 <h1>List of stations</h1>
 
-<%= link_to 'New railway station', new_railway_station_path %>
-
 <table>
   <tr>
     <th>Title</th>
-    <th></th>
+    <th colspan="3"></th>
   </tr>
 
-  <% @railway_stations.each do |rs| %>
-      <tr>
-        <td><%= rs.title %></td>
-        <td><%= link_to 'Show', railway_station_path(rs) %></td>
-        <td><%= link_to 'Edit', edit_railway_station_path(rs) %></td>
-        <td><%= link_to 'Destroy', railway_station_path(rs), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-  <% end %>
+  <%= render @railway_stations %>
+
 </table>
+
+<br><%= link_to 'New railway station', new_railway_station_path %>

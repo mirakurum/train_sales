@@ -1,18 +1,6 @@
 <%= form_for @railway_station do |f| %>
 
-    <% if @railway_station.errors.any? %>
-        <div id="error_explanation">
-          <h2>
-            <%= pluralize(@railway_station.errors.count, "error") %> prohibited
-            this railway station from being saved:
-          </h2>
-          <ul>
-            <% @railway_station.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-            <% end %>
-          </ul>
-        </div>
-    <% end %>
+    <%= render 'common/errors', resource: @railway_station %>
 
     <p>
       <%= f.label :title %><br>
@@ -20,7 +8,7 @@
     </p>
 
     <p>
-      <%= f.submit %>
+      <%= f.submit "#{@railway_station.new_record? ? 'Create' : 'Update'}" %>
     </p>
 <% end %>
 
