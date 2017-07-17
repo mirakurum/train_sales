@@ -6,6 +6,14 @@
       <%= f.label :title %><br>
       <%= f.text_field :tnumber %>
     </p>
+    <p>
+      <%= f.label :current_station %><br>
+      <%= f.collection_select :current_station_id, RailwayStation.all, :id, :title %>
+    </p>
+    <p>
+      <%= f.label :route %><br>
+      <%= f.collection_select :route_id, Route.all, :id, :title %>
+    </p>
 
     <p>
       <%= f.submit %>
