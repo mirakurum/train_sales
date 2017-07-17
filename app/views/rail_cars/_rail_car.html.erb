@@ -1,0 +1,8 @@
+<tr>
+  <td><%= rail_car.number %></td>
+  <td><%= rail_car.rc_type %></td>
+  <td><%= rail_car.seat %></td>
+  <td><%= link_to 'Show', rail_car_path(rail_car) %></td>
+  <td><%= link_to 'Edit', edit_rail_car_path(rail_car) %></td>
+  <td><%= link_to 'Destroy', rail_car_path(rail_car), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+</tr>

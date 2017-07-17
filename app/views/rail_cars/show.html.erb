@@ -1,0 +1,17 @@
+<h1>rail car</h1>
+
+<p>
+  <strong>Title:</strong>
+  <%= @rail_car.number %>
+</p>
+<p>
+  <strong>Train:</strong>
+  <%	 if @rail_car.train.present? %>
+    <%= @rail_car.train.tnumber %>
+  <%	 else %>
+    Not on train
+  <%	 end %>
+</p>
+
+<%= link_to 'Back', rail_cars_path %>
+<%= link_to 'Edit', edit_rail_car_path(@rail_car) %>
