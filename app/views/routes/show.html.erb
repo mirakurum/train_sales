@@ -4,5 +4,16 @@
   <strong>Title:</strong>
   <%= @route.title %>
 </p>
+<p>
+  <strong>Trains on route:</strong>
+  <%	 if @route.trains.present? %>
+    <% @route.trains.each do |train| %>
+      <br><%=	 train.tnumber %>
+    <%	 end %>
+  <%	 else %>
+    No trains
+  <%	 end %>
+</p>
+
 <%= link_to 'Back', routes_path %>
 <%= link_to 'Edit', edit_route_path(@route) %>
